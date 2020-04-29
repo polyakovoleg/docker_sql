@@ -1,0 +1,25 @@
+{
+  "name": "auto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "prettier": "prettier --config .prettierrc --ignore-path .eslintignore --write ./src/**/*.js",
+    "lint": "eslint --fix ./src/**/*.js",
+    "check": "npm run prettier && npm run lint",
+    "extract-files": "docker cp app:/app/data ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-plugin-deprecate": "^0.7.0",
+    "prettier": "^2.0.5"
+  }
+}
